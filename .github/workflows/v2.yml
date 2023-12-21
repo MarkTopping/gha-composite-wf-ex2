@@ -8,12 +8,12 @@ on:
     inputs:
       ForceFailUat1:
         description: Fail UAT 1 deployment?
-        type: Boolean
+        type: boolean
         required: true
         default: false
       ForceFailUat2:
         description: Fail Uat 2 deployment?
-        type: Boolean
+        type: boolean
         required: true
         default: false 
         
@@ -117,7 +117,7 @@ jobs:
     environment: uat
     steps:
       - name: Check for Force Failure
-        if: inputs.ForceFailUat1 == true
+        if: ${{ inputs.ForceFailUat1 == true }}
         run: |
           echo: "Deployment to UAT Region 1 was force failed by user"
           exit 1
@@ -132,7 +132,7 @@ jobs:
     environment: uat
     steps:
       - name: Check for Force Failure
-        if: inputs.ForceFailUat2 == true
+        if: ${{ inputs.ForceFailUat2 == true }}
         run: |
           echo: "Deployment to UAT Region 2 was force failed by user"
           exit 1
