@@ -188,7 +188,7 @@ jobs:
   deploy-to-prd-region-2:
     if: ${{ always() && (contains(join(needs.*.result, ','), 'success')) }}
     runs-on: ubuntu-latest
-    needs: [publish, deploy-to-uat-region-1, deploy-to-uat-region-2]
+    needs: [deploy-to-uat-region-1, deploy-to-uat-region-2]
     environment: prd
     steps:
       - name: Check for Force Failure
