@@ -7,12 +7,12 @@ on:
   workflow_dispatch:
     inputs:
       ForceFailTest1:
-        description: Fail UAT 1 deployment?
+        description: Fail Test 1 deployment?
         type: boolean
         required: true
         default: false
       ForceFailTest2:
-        description: Fail Uat 2 deployment?
+        description: Fail Test 2 deployment?
         type: boolean
         required: true
         default: false 
@@ -27,12 +27,12 @@ on:
         required: true
         default: false 
       ForceFailPrd1:
-        description: Fail UAT 1 deployment?
+        description: Fail Prd 1 deployment?
         type: boolean
         required: true
         default: false
       ForceFailPrd2:
-        description: Fail Uat 2 deployment?
+        description: Fail Prd 2 deployment?
         type: boolean
         required: true
         default: false 
